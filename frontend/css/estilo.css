@@ -1,0 +1,45 @@
+body{
+	margin: 0;
+	font-family: Helvetica,Arial,sans-serif;
+
+}
+
+ul{
+	margin: 0 auto;
+	padding: 20px;
+	list-style: none;
+	width: 100%;
+	background:#35363A; 
+	text-align: center;
+
+}
+
+ul li{
+	display: inline;
+	display: inline;
+	padding: 8%;
+
+}
+
+ul a{
+	text-decoration: none;
+	font-size: 20px;
+	color: white;
+}
+
+ul a:hover{
+	color: #B91414 ;
+	border-bottom: 1px solid #B91414 ;
+
+}
+
+#KOP{
+	color: white;
+	margin-top: -10px;
+	padding: 20px;
+	font-size: 30px;
+
+}
+
+
+
