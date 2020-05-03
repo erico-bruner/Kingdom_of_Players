@@ -1,112 +1,77 @@
 body{
-	margin: 0;
-	padding: 0;
-	background: url(../img/fundo.jpg);
-	background-size: cover;
-	font-family: "Comfortaa",sans-serif;
+    background: url(../img/fundo.jpg);
+    font-family: Georgia, serif; 
+    font-size: 18px;
 
 }
 
-.login{
-	width: 320px;
-	height: 420px;
-	border: 2px solid #000;
-	border-radius: 80px 0px 80px 0px;
-	color: #fff;
-	background-color:rgba(0,0,5,0.8);
-	top: 50%;
-	left: 50%;
-	position: absolute;
-	transform: translate(-55%, -55%);
-	box-sizing: border-box;
-	padding: 68px 28px;
+
+.form{
+	width: 400px;
+	margin: auto;
+	padding-top: 11%;
 
 }
 
-.usuario{
-	border-radius: 50%;
-	position: absolute;
-	top: -50px;
-	left: 112px;
-
-
+.card{
+	box-shadow: 1px 1px 5px #ccc;
+	background: white;
+	padding: 30px;
+	border-radius: 5px;
 }
 
-h1{
-	margin: 0;
-	padding-top: 0;
-	padding-left: 0;
-	padding-bottom: 20px;
-	letter-spacing: 10px;
-	text-transform: uppercase;
+.card-top{
 	text-align: center;
-	font-size: 25px;
 
 }
 
-
-.login p{
-	margin: 0;
-	padding: 0;
-	font-weight: bold;
-
-
-
-
+.img-login{
+	border-radius: 40px;
+	width: 100px;
+	box-shadow: 1px 1px 5px #ccc;
+}
+.nome{
+	color: #4F4F4F;;
 }
 
-.login input{
+.card-grupo > input{
+	border-radius: 5px;
+	outline: 0;
 	width: 100%;
-	margin-bottom: 21px;
+	height: 20px;
+	padding: 5px;
+}
 
+.card-grupo > label{
+	color: rgb(75,75,75);
+	display: block;
+}
+
+.card-grupo{
+	margin-bottom: 15px;
 
 }
 
-
-.login input[type="text"], input[type="password"]{
-	border: none;
-	border-bottom: 1px solid white;
-	background: transparent;
-	outline: none;
-	height: 40px;
+.card-grupo > button{
+	background-color: #808080;
+	width: 100%;
+	border-radius: 30px;
+	padding: 15px;
 	color: white;
-	font-size: 16px;
-
-
+	border: 0px;
+	outline: 0;
 }
 
-.login input[type="submite"]{
-	border: none;
-	outline: none;
-	height: 35px;
-	color: #000;
-	background: #fff;
-	border-radius: 20px;
-	transition: 0.2s;
-
+.card-grupo > button:hover{
+		background-color: #4F4F4F;
 }
 
-.login input[type="submite"]:hover{
-	cursor: pointer;
-	background: #ff4d4d;
-	transition: 0.2s;
+label{
+	padding-bottom: 10px;
 }
 
-.login a{
-	font-weight: bold;
-	text-decoration: none;
-	font-size: 12px;
-	line-height: 20px;
-	color: white;
-	transition: 0.2;
+.card-new-accont{
+	padding-bottom: 25px; 
+	color: #4F4F4F;
+
 }
-
-.login a:hover{
-	transition: 0.2s;
-	color: #ff4d4d;
-}
-
-
-
-
-

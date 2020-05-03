@@ -1,16 +1,24 @@
 body{
+	width: 100%;
 	margin: 0;
-	font-family: Helvetica,Arial,sans-serif;
-
+	/*font-family: Helvetica,Arial,sans-serif;*/
+    font-family: Georgia, serif; 
+    font-size: 22px;
+    background: url(../img/fundo.jpg);
+    	background-size: cover;
 }
 
+/*Nav bar start*/
+
+
+
 ul{
-	margin: 0 auto;
-	padding: 20px;
+	margin: 0;
+	padding-bottom: 20px;
 	list-style: none;
-	width: 100%;
-	background:#35363A; 
+	background:#35363A no-repeat; 
 	text-align: center;
+
 
 }
 
@@ -28,18 +36,47 @@ ul a{
 }
 
 ul a:hover{
-	color: #B91414 ;
-	border-bottom: 1px solid #B91414 ;
+	color: 	#D3D3D3;
+	border-bottom: 1px solid #D3D3D3 ;
 
 }
+
+
+#index .home a,
+#login .entrar a {
+	color: 	#D3D3D3;
+	border-bottom: 1px solid #D3D3D3 ;
+}
+
+
+/*Nav bar end*/
+
 
 #KOP{
+	padding-top: 40px;
+	padding-bottom: 10px;
 	color: white;
 	margin-top: -10px;
-	padding: 20px;
 	font-size: 30px;
+	text-align: center;
 
 }
 
 
 
+footer{
+	margin: 1px solid red;
+	height: 150px;
+	background: black;
+	text-align: center;
+	color: white;
+	font-size: 16px;
+	margin-top: 50%;
+}
+
+form{
+	color: white;
+	margin-top: 40%;
+	margin-left: 40%; 
+
+}
