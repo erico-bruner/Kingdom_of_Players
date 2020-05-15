@@ -1,82 +1,81 @@
-body{
-	width: 100%;
-	margin: 0;
-	/*font-family: Helvetica,Arial,sans-serif;*/
-    font-family: Georgia, serif; 
-    font-size: 22px;
-    background: url(../img/fundo.jpg);
-	background-size: cover;
+body {
+  max-width: 100%;
+  margin: 0;
+  /*font-family: Helvetica,Arial,sans-serif;*/
+  font-family: Georgia, serif;
+  font-size: 22px;
+  background: url(../img/fundo.jpg) no-repeat;
+  background-size: cover;
 }
 
 /*Nav bar start*/
 
-
-
-ul{
-	margin: 0;
-	padding-bottom: 20px;
-	list-style: none;
-	background:#35363A no-repeat; 
-	text-align: center;
-
-
+ul {
+  margin: 0;
+  padding-bottom: 20px;
+  list-style: none;
+  /* background: #35363a; */
+  text-align: center;
 }
 
-ul li{
-	display: inline;
-	display: inline;
-	padding: 6%;
-
+#top {
+  background: #35363a8e;
 }
 
-ul a{
-	text-decoration: none;
-	font-size: 20px;
-	color: white;
+ul li {
+  display: inline;
+  margin: 4%;
 }
 
-ul a:hover{
-	color: 	#D3D3D3;
-	border-bottom: 1px solid #D3D3D3;
-	font-size: 22px;
-
+a {
+  text-decoration: none;
 }
 
+ul a {
+  font-size: 20px;
+  color: white;
+}
 
-#index .home a,
+ul a:hover {
+  color: #d3d3d3;
+  border-bottom: 1px solid #d3d3d3;
+  font-size: 21px;
+}
+
+body .home a,
 #login .login a {
-	color: 	#D3D3D3;
-	border-bottom: 1px solid #D3D3D3 ;
+  color: #d3d3d3;
+  border-bottom: 1px solid #d3d3d3;
 }
-
 
 /*Nav bar end*/
 
-
-#KOP{
-	padding-top: 40px;
-	padding-bottom: 10px;
-	color: white;
-	margin-top: -10px;
-	font-size: 30px;
-	text-align: center;
-
+#KOP {
+  padding-top: 40px;
+  padding-bottom: 10px;
+  color: white;
+  margin-top: -10px;
+  font-size: 30px;
+  text-align: center;
 }
 
-
-footer{
-	margin: 1px solid red;
-	height: 150px;
-	background: black;
-	text-align: center;
-	color: white;
-	font-size: 16px;
-	margin-top: 50%;
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  margin: 1px solid red;
+  height: fit-content;
+  background: black;
+  text-align: center;
+  padding: 0.5%;
+  color: white;
+  font-size: 16px;
+  /* margin-top: 50%; */
 }
 
-form{
-	color: white;
-	margin-top: 40%;
-	margin-left: 40%; 
-
+form {
+  color: white;
+  margin-top: 40%;
+  margin-left: 40%;
 }
