@@ -5,7 +5,7 @@ body{
     font-family: Georgia, serif; 
     font-size: 22px;
     background: url(../img/fundo.jpg);
-    	background-size: cover;
+	background-size: cover;
 }
 
 /*Nav bar start*/
@@ -25,7 +25,7 @@ ul{
 ul li{
 	display: inline;
 	display: inline;
-	padding: 8%;
+	padding: 6%;
 
 }
 
@@ -37,13 +37,14 @@ ul a{
 
 ul a:hover{
 	color: 	#D3D3D3;
-	border-bottom: 1px solid #D3D3D3 ;
+	border-bottom: 1px solid #D3D3D3;
+	font-size: 22px;
 
 }
 
 
 #index .home a,
-#login .entrar a {
+#login .login a {
 	color: 	#D3D3D3;
 	border-bottom: 1px solid #D3D3D3 ;
 }
@@ -61,7 +62,6 @@ ul a:hover{
 	text-align: center;
 
 }
-
 
 
 footer{
