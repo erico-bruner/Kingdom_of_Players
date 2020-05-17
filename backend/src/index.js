@@ -10,10 +10,14 @@ const app = express()
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded())
 
+console.log({message: process.env.REACT_APP_TESTE})
+
 //Conecção com BD do MongoDB
-monsgoose.connect('mongodb+srv://EricoBruner:erico2403@cluster0-sztec.mongodb.net/KOP?retryWrites=true&w=majority', {
+monsgoose.connect( process.env.MONGO_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
+  useCreateIndex: true,
+  useFindAndModify: false,
 
 }).then(() => {
   console.log(">>> Conecção com MongoDB concluida <<<")
