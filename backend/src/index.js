@@ -10,8 +10,6 @@ const app = express()
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded())
 
-console.log({message: process.env.REACT_APP_TESTE})
-
 //Conecção com BD do MongoDB
 monsgoose.connect( process.env.MONGO_URL, {
   useNewUrlParser: true,
