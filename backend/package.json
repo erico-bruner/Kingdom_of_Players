@@ -4,8 +4,7 @@
   "main": "src/index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon",
-    "env": "nodemon bin/dev"
+    "dev": "nodemon"
   },
   "dependencies": {
     "body-parser": "^1.19.0",

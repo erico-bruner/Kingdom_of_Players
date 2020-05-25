@@ -2,6 +2,7 @@ const express = require('express')
 const monsgoose = require('mongoose')
 const bodyParser = require('body-parser')
 const requireDir = require('require-dir')
+require("dotenv").config()
 
 //Iniciando o App
 const app = express()
