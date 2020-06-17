@@ -1,0 +1,64 @@
+body{
+  background-color: rgb(49, 43, 43);
+  background-image:url('../img/fundo.jpg');
+  background-size:100% ;
+font-size: 20px;
+
+}
+
+#fomrlogin{
+  margin: 10% auto;
+padding: 2%;
+background-color:white;
+border-radius: 10px;
+border: 2px solid rgb(49, 12, 12);
+}
+
+.btn{
+  background-color:#272303;
+  color: white;
+  box-shadow: 0 0 1px #ccc;
+  transition: all 0.5s ease-in-out;
+  border: none;
+  color: #fff;
+
+}
+.btn:hover{
+  transform: scale(1.1);
+  background: #796d05;
+  color: white;
+}
+#cadastro{
+ float: right;
+
+}
+
+#cadastro :hover{
+  color: white;
+}
+
+#fomrCadastro{
+
+  margin: 6% auto;
+  padding: 2%;
+  background-color:white;
+  border-radius: 10px;
+  border: 2px solid rgb(49, 12, 12);
+}
+
+#main{
+  width: 95%;
+  height: 700px;
+  border: 2px solid #1B1C1E;
+  margin:3% auto;
+  background-color:#0C1323;
+  border-radius: 10px;
+  opacity: 40%;
+  color: #fff;
+}
+
+footer{
+  background-color: white;
+  text-align: center;
+  margin-top: 4%;
+}
