@@ -1,7 +1,11 @@
-module.export = {
-   username: 'root',
-   password: 'admin',
-   database: 'database_dev',
-   host: '127.0.0.1',
-   dialect: 'postgres'
-   }
+module.exports = {
+  database: 'kop',
+  password: 'erico2403',
+  username: 'Erico',
+  host: 'localhost',
+  dialect: 'mysql',
+  define: {
+    timestamp: true,
+    underscored: true,
+  }
+}
