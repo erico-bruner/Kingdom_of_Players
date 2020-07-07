@@ -26,7 +26,7 @@ module.exports = {
               location, 
               puctuation,
             })
-            let token = jwt.sign({ id_user: User.id }, process.env.JWT_KEY, { expiresIn: "24h"})
+            let token = jwt.sign({ User }, process.env.JWT_KEY, { expiresIn: "24h"})
             return res.status(201).send({message: 'User created successfully', token: token})
           }else{
             return res.status(401).send({message: 'Email already registered'})
@@ -42,7 +42,7 @@ module.exports = {
     })
   },
 
-  async authentication(req, res) {
+  async login(req, res) {
     const { name, password } = req.body
 
     await User.findOne({
@@ -52,14 +52,24 @@ module.exports = {
     }).then(user => {
       if(user){
         if(bcrypt.compareSync(password, user.password )){
-          let token = jwt.sign({ id_user: user.id }, process.env.JWT_KEY, { expiresIn: "24h"})
-          return res.status(200).send({message: 'successfully logged in', token: token})
+          let token = jwt.sign({user}, process.env.JWT_KEY, { expiresIn: "24h"})
+          return res.status(200).send({message: 'successfully logged in', token: token })
         }else{
           return res.status(401).send({message: 'Invalid credentials'})
         }
       }else{
         return res.status(401).send({message: 'Invalid credentials'})
       }
+    }).catch(err => {
+      return res.send({error: err})
+    })
+  },
+
+  async list(req, res) {
+    const { name, password } = req.body
+
+    await User.findAll().then(users => {
+      return res.json(users)
     }).catch(err => {
       return res.send({error: err})
     })
