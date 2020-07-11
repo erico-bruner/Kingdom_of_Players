@@ -1,64 +1,184 @@
-body{
-  background-color: rgb(49, 43, 43);
-  background-image:url('../img/fundo.jpg');
-  background-size:100% ;
-font-size: 20px;
-
+body {
+  background-color: rgba(100, 65, 65, 0.548);
+  background-image: url('../img/fundo.jpg');
+  background-size: 100%;
+  font-size: 20px;
 }
 
-#fomrlogin{
-  margin: 10% auto;
-padding: 2%;
-background-color:white;
-border-radius: 10px;
-border: 2px solid rgb(49, 12, 12);
+#formlogin {
+  margin: 11% auto;
+  padding: 2%;
+  background-color: white;
+  border-radius: 10px;
+  border: 2px solid rgb(49, 12, 12);
+  box-shadow: 8px 8px 8px 8px rgb(0, 0, 0);
 }
 
-.btn{
-  background-color:#272303;
+.btn {
+  background-color: #272303;
   color: white;
   box-shadow: 0 0 1px #ccc;
   transition: all 0.5s ease-in-out;
   border: none;
   color: #fff;
-
 }
-.btn:hover{
+
+.btn:hover {
   transform: scale(1.1);
   background: #796d05;
   color: white;
 }
-#cadastro{
- float: right;
 
+#cadastro {
+  float: right;
 }
 
-#cadastro :hover{
+#cadastro :hover {
   color: white;
 }
 
-#fomrCadastro{
-
-  margin: 6% auto;
+#formCadastro {
+  margin: 8% auto;
   padding: 2%;
-  background-color:white;
+  background-color: white;
   border-radius: 10px;
   border: 2px solid rgb(49, 12, 12);
 }
 
-#main{
-  width: 95%;
-  height: 700px;
-  border: 2px solid #1B1C1E;
-  margin:3% auto;
-  background-color:#0C1323;
+#index .container {
+  background-color: red;
+  height: 681px;
+  margin-top: 4%;
+  background-color: #fff;
   border-radius: 10px;
-  opacity: 40%;
+  box-shadow: 8px 8px 8px 8px rgb(0, 0, 0);
+}
+
+#perfil .container {
+  background-color: #F8F9FA;
+  height: 1500px;
+  margin-top: -15px;
+  border-top: 0px;
+}
+
+#perfil .capa {
+  background-color: #383328;
+  height: 300px;
+  text-align: center;
+  color: #fff;
+  margin-top: 15px;
+  border-top: 0px;
+  border-radius: 5px;
+  border: 1px solid #000;
+}
+
+@media only screen and (max-width: 604px) {
+  #perfil .capa {
+    background-color: #383328;
+    height: 150px;
+  }
+}
+
+#perfil .foto-perfil {
+  margin: -75px auto;
+  text-align: center;
   color: #fff;
 }
 
-footer{
+#perfil .foto-perfil .perfil-foto {
+  height: 175px;
+  width: 175px;
+  border-radius: 130px;
+}
+
+@media only screen and (max-width: 601px) {
+  #perfil .foto-perfil .perfil-foto {
+    height: 115px;
+    width: 115px;
+    border: none;
+    margin-left: -12px;
+    /* margin-right: 76px; */
+    border-radius: 100px;
+    margin-top: -10px;
+  }
+  
+}
+
+#perfil .social {
+  float: right;
+  list-style: none;
+  margin-top: -150px;
+  font-size: 30px !important;
+}
+
+#perfil .games-list {
+  float: left;
+  margin-top: -150px;
+  font-size: 30px !important;
+}
+
+@media only screen and (max-width: 600px) {
+  #perfil .social {
+    float: right;
+    list-style: none;
+    margin-top: -10px;
+    font-size: 30px !important;
+    margin-right: 124px;
+  }
+}
+
+#perfil .social ul li {
+  display: inline;
+}
+
+#perfil .games-list ul li {
+  background-color: #383328;
+  padding: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  border-radius: 10px;
+  list-style: none;
+  margin: 5px;
+  margin-left: -40px;
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+  #perfil .games-list ul {
+    list-style: none;
+    margin-top: 150px;
+    font-size: 20px !important;
+    margin-left: 105px;
+  }
+}
+
+#perfil .social ul li i {
+  font-size: 30px;
+  margin-left: 15px;
+  color: #000;
+}
+
+@media only screen and (max-width: 600px) {
+  #perfil .foto-perfil {
+    background-color: #88745f;
+    height: 90px;
+    width: 90px;
+    border-radius: 80px;
+    margin-top: -48px;
+  }
+}
+
+#perfil .desc-perfil {
+  color: rgb(121, 0, 0);
+  text-align: center;
+  margin-top: 80px;
+}
+
+.footer {
   background-color: white;
   text-align: center;
   margin-top: 4%;
+  padding: 9px !important;
 }

@@ -1,7 +1,3 @@
-<?php
-  include_once("scripts/conexao.php");
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -21,55 +17,10 @@
 
   <header>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light col-12">
-      <img src="img/icon.png" alt="Girl in a jacket" width="70" height="70"> <a class="navbar-brand" href="index.php" style="margin-right:30px;padding: 10px;">Kingdon Of Player</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="index.php" style="padding: 10px;"> <label>Reino </label></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" style="padding: 10px;"> <label>Mapa </label></a></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" style="padding: 10px;"> <label>Ranking </label></a></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" style="padding: 10px;"> <label>Opções </label></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" style="padding: 10px;" class="fa fa-sign-in" aria-hidden="true"> <label>Ajuda </label></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#" style="padding: 10px;" class="fa fa-sign-in" aria-hidden="true"> <label>Sobre </label></a>
-          </li>
-          <li class="nav-item dropdown active">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="padding: 10px;">
-              <label>Entrar</label>
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-
-              <a class="dropdown-item" href="login.php">Logar</a>
-              <a class="dropdown-item" href="#">Sair</a>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </nav>
-
   </header>
 
-
-
-
   <main>
-
-
-
-  <div class="col-lg-3 col-md-8 col-sm-10" id="fomrCadastro">
+  <div class="col-lg-3 col-md-8 col-sm-10" id="formCadastro">
     <form class="col-" name="cadastro" method="post" action="scripts/processa.php"">
     <div class="form-group">
         <label for="exampleInputPassword1">Nome no Reino:</label>
@@ -89,9 +40,10 @@
         <label for="exampleInputPassword1">Repetir senha</label>
         <input type="password" class="form-control"  name="senhaValida" id="exampleInputPassword1" placeholder="Senha">
       </div>
-
-        <button type="submit" class="btn btn-info">Entrar</button>
-        <a type="submit" class="btn btn-info" style="color:white;" id="cadastro">Cadastrar-se</a>
+      <div >
+        <a href="login.php" style="font-size:15px; color:#474004;">Já possui conta?</a>
+        <button type="submit" class="btn btn-info" style="color:white;" id="cadastro">Cadastrar-se</button>
+      </div>
       </form>
       </div>  
    
