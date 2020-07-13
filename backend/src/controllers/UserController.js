@@ -1,7 +1,9 @@
-const User = require('../models/User')
+const User = require('../models/SQL/User')
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 require('dotenv').config()
+
+// index - mostrar_lista, show - mostar_unico, store - criar, update, destroy
 
 module.exports = {
   
@@ -73,5 +75,10 @@ module.exports = {
     }).catch(err => {
       return res.send({error: err})
     })
+  },
+
+  async teste(req, res) {
+    const { name, password } = req.body
+
   }
 }

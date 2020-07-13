@@ -1,4 +1,4 @@
-const User = require('../models/User')
+const User = require('../models/SQL/User')
 const jwt = require('jsonwebtoken')
 require('dotenv').config()
 
@@ -10,7 +10,7 @@ module.exports = (req, res, next) => {
       if(error) {
         return res.status(401).send('token invalid')
       } else {
-        req.authData = authData
+        module.exports = authData
         next() 
       }
     })

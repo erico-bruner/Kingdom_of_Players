@@ -2,7 +2,8 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const routes = require('./routes')
 
-require('./database')
+require('./database/SQL')
+require('./database/noSQL')
 
 //Iniciando o App
 const app = express()
