@@ -1,2 +1,2 @@
 # Kingdom_of_Players
-Trabalho TCC ( HTML, CSS, NODE.JS )
+Trabalho TCC ( HTML, CSS,BOOSTRAP e NODE.JS )
