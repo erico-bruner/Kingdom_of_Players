@@ -2,7 +2,6 @@
   function apiConnection($date, $method, $url, $token) {   
     $urlCall = "http://localhost:3333/$url";
     $ch = curl_init($urlCall);
-    //$date = array("name" => "Erico", "password" => "12345");
     $json = json_encode($date);
     curl_setopt($ch, CURLOPT_POST, true);
     curl_setopt($ch, CURLOPT_POSTFIELDS, $json);
