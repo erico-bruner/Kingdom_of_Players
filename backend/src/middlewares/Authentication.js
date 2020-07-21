@@ -6,16 +6,16 @@ module.exports = (req, res, next) => {
   const token = req.headers['authorization']
 
   if(typeof token !== 'undefined') {
-    jwt.verify(token, process.env.JWT_KEY, (error, authData) => {
+    jwt.verify(token, process.env.JWT_KEY, (error, authDate) => {
       if(error) {
-        return res.status(401).send('token invalid')
+        return res.status(401).json({success: false, message:'token invalid'})
       } else {
-        module.exports = authData
+        res.locals.authDate = authDate
         next() 
       }
     })
   }else{
-    return res.status(401).send({error: 'token not informed'})
+    return res.status(401).json({success: false, message: 'token not informed'})
   }
 
 }

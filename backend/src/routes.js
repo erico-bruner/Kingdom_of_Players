@@ -8,7 +8,9 @@ const authentication = require('./middlewares/Authentication')
 routes.post('/users', UserController.store)
 routes.post('/login', UserController.login)
 
-routes.post('/date', authentication, dateUserController.store)
-routes.get('/users', authentication, UserController.list )
+routes.post('/kingdom', authentication, dateUserController.store)
+routes.get('/users', authentication, UserController.list)
+
+routes.post('/teste', UserController.teste)
 
 module.exports = routes
