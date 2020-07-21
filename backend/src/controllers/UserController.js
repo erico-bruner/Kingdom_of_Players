@@ -24,9 +24,6 @@ module.exports = {
               name, 
               email, 
               password: hash, 
-              id_games, 
-              location, 
-              puctuation,
             })
             let token = jwt.sign({ User }, process.env.JWT_KEY, { expiresIn: "24h"})
             return res.status(201).json({success: true, message: 'User created successfully', token: token})
