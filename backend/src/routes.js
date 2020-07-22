@@ -11,6 +11,6 @@ routes.post('/login', UserController.login)
 routes.post('/kingdom', authentication, dateUserController.store)
 routes.get('/users', authentication, UserController.list)
 
-routes.post('/teste', UserController.teste)
+routes.get('/teste', UserController.teste)
 
 module.exports = routes

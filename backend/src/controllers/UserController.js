@@ -26,16 +26,20 @@ module.exports = {
               password: hash, 
             })
             let token = jwt.sign({ User }, process.env.JWT_KEY, { expiresIn: "24h"})
-            return res.status(201).json({success: true, message: 'User created successfully', token: token})
+            return res.status(201).json({success: 'true', message: 'User created successfully', token: token})
           }else{
-            return res.status(401).json({success: false, message: 'Email already registered'})
+            return res.status(401).json({success: 'false', message: 'Email already registered'})
           }
         }).catch(err => {
           console.log(User)
           return res.json({error: err, message:"email"})
         })
       }else{
-        return res.status(401).json({success: false, message: 'Name already registered'})
+        return res.status(401).json(
+          {
+            "success": "false",
+            "message":"Name already registered",
+          })
       }
     }).catch(err => {
       return res.json({error: err, message: "name"})
@@ -43,22 +47,24 @@ module.exports = {
   },
 
   async login(req, res) {
-    const { name, password } = req.body
+    const { email, password } = req.body
 
     await User.findOne({
       where: {
-        name: name
+        email: email
       }
     }).then(user => {
       if(user){
         if(bcrypt.compareSync(password, user.password )){
           let token = jwt.sign({user}, process.env.JWT_KEY, { expiresIn: "24h"})
-          return res.status(200).json({message: 'successfully logged in', token: token })
+          return res.status(200).json({success: "true", message: 'successfully logged in', token: token })
         }else{
-          return res.status(401).json({success: false, message: 'Invalid credentials'})
+          console.log(email, password)
+          return res.status(401).json({success: "false", message: 'Invalid credentials SENHA'})
         }
       }else{
-        return res.status(401).json({sucess: false, message: 'Invalid credentials'})
+        console.log(email, password)
+        return res.status(401).json({sucess: "false", message: 'Invalid credentials EMAIL'})
       }
     }).catch(err => {
       return res.json({error: err})
@@ -67,20 +73,13 @@ module.exports = {
 
   async list(req, res) {
     await User.findAll().then(users => {
-      return res.json({success: true, users: users})
+      return res.json({success: "true", users: users})
     }).catch(err => {
-      return res.json({success: false, error: err})
+      return res.json({success: "false", error: err})
     })
   },
 
   async teste(req, res) {
-    const { name, password } = req.body
-    const all = req.body
-    console.log(name, password)
-    console.log(all)
-    if(!name | !password){
-      return res.status(401).json({success: false, message: "noma e senha nao informados"})
-    }
-    return res.status(200).json({success: true, dados:{name: name, password: password, teste: "testeteste"}})
+      res.json({success: "false", users: "users", teste: "testeDentroDoTeste"})
   }
 }
