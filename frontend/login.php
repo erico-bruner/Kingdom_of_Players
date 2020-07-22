@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,6 +11,7 @@
   <meta charset="utf-8">
   <link rel="icon" type="imagem/png" href="img/icon.png" />
   <script src="https://use.fontawesome.com/a2dd855306.js"></script>
+</head>
 
 <body>
 
@@ -25,28 +25,28 @@
 
 
 
-  <div class="col-lg-3 col-md-8 col-sm-10" id="formlogin">
-    <form class="col-"  name="login" method="post" action="scripts/valida.php" onsubmit="return validacaoLogin()">
-      <div class="form-group">
-        <label for="exampleInputEmail1 " name="email">Email:</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
-        <small id="emailHelp" class="form-text text-muted" >Nunca compartilhe seu email com ninguém.</small>
-      </div>
-      <div class="form-group">
-        <label for="exampleInputPassword1" name="senha">Senha:</label>
-        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
-      </div>
-      <div >
-        <a href="" style="font-size:15px; color:#474004;">Esqueceu sua senha?</a><br>
-        <a href="cadastro.php" style="font-size:15px; color:#474004;">Ainda não tem conta?</a>
-      </div>
+    <div class="col-lg-3 col-md-8 col-sm-10" id="formlogin">
+      <form class="col-" name="login" method="post" action="scripts/valida.php">
+        <div class="form-group">
+          <label for="exampleInputEmail1 ">Email:</label>
+          <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+          <small id="emailHelp" class="form-text text-muted">Nunca compartilhe seu email com ninguém.</small>
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Senha:</label>
+          <input type="password" class="form-control" name="senha" id="exampleInputPassword1" placeholder="Senha">
+        </div>
+        <div>
+          <a href="" style="font-size:15px; color:#474004;">Esqueceu sua senha?</a><br>
+          <a href="cadastro.php" style="font-size:15px; color:#474004;">Ainda não tem conta?</a>
+        </div>
         <button type="submit" class="btn btn-info">Entrar</button>
-
       </form>
-      </div>  
-   
-      
-      
+
+    </div>
+
+
+
   </main>
 
 

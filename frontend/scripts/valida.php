@@ -1,27 +1,29 @@
 <?php
-include_once ("conexao.php");
+$email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+$senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_STRING);
 
+echo $email;
+echo $senha;
+echo "<br>";
 
-$email = mysqli_real_escape_string($conn, $_POST['email']);
-$senha = mysqli_real_escape_string($conn, $_POST['senha']);
+  $date = array("email" => "$email", "password" => "$senha"); 
+  $urlCall = "http://localhost:3333/login";
+  $ch = curl_init($urlCall);
+  curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+  $json = json_encode($date);
+  curl_setopt($ch, CURLOPT_POST, true);
+  curl_setopt($ch, CURLOPT_POSTFIELDS, $json);
+  curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
+  curl_setopt($ch, CURLOPT_TIMEOUT, 10);
+  curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type: application/json', "authorization: null"));
+  $resultado = json_decode(curl_exec($ch));
+  var_dump($resultado);
+  if ($resultado->success == "true") {
+    session_start();
+    $_SESSION =  $resultado->token;
 
-$senha = md5($senha);
-
-$query = "select * from dm_usuarios where  ds_email = '{$email}' and ds_senha = '{$senha}' ";
-
-$result = mysqli_query($conn, $query);
-$row = mysqli_fetch_array($result);
-
-$nr_rows = mysqli_num_rows($result);
-
-if ($nr_rows == 1){
-  $_SESSION["email"] = $row['ds_email'];
-  $_SESSION["senha"] = $row['ds_senha'];
-	header("Location: ../index.php");
-
-
-
-}else{
-  header("Location:../login.php");
-}
-?>
+    header('Location:../index.php');
+  } else {
+    header('Location:../login.php');
+  }

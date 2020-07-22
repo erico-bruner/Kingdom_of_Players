@@ -21,7 +21,7 @@
 
   <main>
   <div class="col-lg-3 col-md-8 col-sm-10" id="formCadastro">
-    <form class="col-" name="cadastro" method="post" action="scripts/processa.php"">
+    <form class="col-" name="cadastro" method="post" action="scripts/processa.php">
     <div class="form-group">
         <label for="exampleInputPassword1">Nome no Reino:</label>
         <input type="text" class="form-control" name="nome" id="exampleInputPassword1" placeholder="Senha">
