@@ -3,6 +3,8 @@
     $urlCall = "http://localhost:3333/$url";
     $ch = curl_init($urlCall);
     $json = json_encode($date);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_POST, true);
     curl_setopt($ch, CURLOPT_POSTFIELDS, $json);
     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, $method);

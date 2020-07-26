@@ -22,7 +22,6 @@ echo "<br>";
   if ($resultado->success == "true") {
     session_start();
     $_SESSION =  $resultado->token;
-
     header('Location:../index.php');
   } else {
     header('Location:../login.php');

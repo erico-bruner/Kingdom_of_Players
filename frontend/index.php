@@ -1,4 +1,7 @@
-
+<?php
+  include_once("scripts/valida.php");
+  echo $_SESSION;
+?>
 <!DOCTYPE html>
 <html lang="en">
 

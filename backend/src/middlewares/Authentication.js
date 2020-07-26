@@ -10,6 +10,9 @@ module.exports = (req, res, next) => {
       if(error) {
         return res.status(401).json({success: false, message:'token invalid'})
       } else {
+        if(!authDate) {
+          return res.status(401).json({success: false, message:'token invalid'})
+        }
         res.locals.authDate = authDate
         next() 
       }

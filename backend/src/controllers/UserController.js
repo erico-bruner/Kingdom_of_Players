@@ -1,4 +1,5 @@
 const User = require('../models/SQL/User')
+
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 require('dotenv').config()
@@ -48,11 +49,8 @@ module.exports = {
 
   async login(req, res) {
     const { email, password } = req.body
-
     await User.findOne({
-      where: {
-        email: email
-      }
+      where:{email: email}
     }).then(user => {
       if(user){
         if(bcrypt.compareSync(password, user.password )){
@@ -60,16 +58,12 @@ module.exports = {
           return res.status(200).json({success: "true", message: 'successfully logged in', token: token })
         }else{
           console.log(email, password)
-          return res.status(401).json({success: "false", message: 'Invalid credentials SENHA'})
+          return res.status(401).json({success: "false", message: 'Invalid credentials'})
         }
       }else{
         console.log(email, password)
-        return res.status(401).json({sucess: "false", message: 'Invalid credentials EMAIL'})
-      }
-    }).catch(err => {
-      return res.json({error: err})
-    })
-  },
+        return res.status(401).json({sucess: "false", message: 'Invalid credentials EMAIL'})}
+    }).catch(err => { return res.json({error: err})})},
 
   async list(req, res) {
     await User.findAll().then(users => {

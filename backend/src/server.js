@@ -2,6 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const routes = require('./routes')
 const cors = require('cors')
+const axios = require('axios')
 
 require('./database/SQL')
 require('./database/noSQL')
@@ -17,6 +18,9 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded())
 app.use(bodyParser.json());
 app.use(bodyParser.raw());
+
+//axios.get('https://api.github.com/users/EricoBruner').then(dados => {
+  //console.log(dados)})
 
 //Iniciando Arquivo de rotas
 app.use(routes)

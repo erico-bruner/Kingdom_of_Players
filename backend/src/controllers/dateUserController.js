@@ -1,10 +1,11 @@
 const dateUser = require('../models/NoSQL/dateUser')
-const authData = require('../middlewares/Authentication')
 
 module.exports = {
   async store(req, res) {
-    const authDate = res.locals.authDate
 
+    const authDate = res.locals.authDate.user
+
+    console.log(authDate)
     const { latitude, longitude } = req.body
 
     const location = {
@@ -21,5 +22,5 @@ module.exports = {
     }).catch((err) => {
       return res.status(401).send({sucess: false, message: err})
     })
-  }
+  },
 }
