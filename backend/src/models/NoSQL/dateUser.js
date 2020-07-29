@@ -8,7 +8,17 @@ const dateUserSchema = new mongoose.Schema({
     type: PointSchema,
     index: '2dsphere'
   },
-  Api: {lol: {id: String, name: String, profileIconId: Number, accountLevel: Number}}
+  Api: 
+    {lol: 
+        {
+          id: String,
+          name: String, 
+          elo: {
+            leagueId: Number,
+          }
+  }}
 })
 
 module.exports = mongoose.model('dateUser', dateUserSchema)
+
+

@@ -1,4 +1,7 @@
-
+<?php
+  include_once "scripts/vincular.php";
+  $result = ($_SESSION['dataUser']);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,25 +26,25 @@
   </button>
   <div class="col-md-5"></div>
   <div> 
-  <div class="collapse navbar-collapse class="col-md-6"" id="navbarNav">
+  <div class="collapse navbar-collapse" class="col-md-6" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item ">
-        <a class="nav-link" href="#" style="padding: 15px;"> <label>Reino </label></a></a>
+        <a class="nav-link" href="index.php" style="padding: 15px;"> <label>Reino </label></a></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#" style="padding: 15px;"> <label>Mapa </label></a></a>
+        <a class="nav-link" href="maps.php" style="padding: 15px;"> <label>Mapa </label></a></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#" style="padding: 15px;"> <label>Ranking </label></a></a>
+        <a class="nav-link" href="ranking.php" style="padding: 15px;"> <label>Ranking </label></a></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#" style="padding: 15px;"> <label>Opções </label></a>
+        <a class="nav-link" href="options.php" style="padding: 15px;"> <label>Opções </label></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#" style="padding: 15px;" class="fa fa-sign-in" aria-hidden="true"> <label>Ajuda </label></a>
+        <a class="nav-link" href="help.php" style="padding: 15px;" class="fa fa-sign-in" aria-hidden="true"> <label>Ajuda </label></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#" style="padding: 15px;" class="fa fa-sign-in" aria-hidden="true"> <label>Sobre </label></a>
+        <a class="nav-link" href="sobre.php" style="padding: 15px;" class="fa fa-sign-in" aria-hidden="true"> <label>Sobre </label></a>
       </li>
       <li class="nav-item dropdown">
         <a style="padding: 15px;"  class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="padding: 10px;">
@@ -66,12 +69,12 @@
         
       </div>
       <div class="foto-perfil">
-        <img class="perfil-foto" src="img/icon.png" width="200">
+        <img class="perfil-foto" src="http://ddragon.leagueoflegends.com/cdn/10.15.1/img/profileicon/<?php print_r($result->data->user->profileIconId)?>.png" width="200">
         
       </div>
       <div class="desc-perfil">
-        <h5>Nome Teste</h5>
-        <p>Desc teste</p>
+        <h5><?php print_r($result->data->kingdomUser->name)?></h5>
+        <p><?php print_r($result->data->kingdomUser->email)?></p>
       </div>
       <div class="social">
       <ul>
@@ -82,12 +85,66 @@
     </div>  
     <div class="games-list">
       <ul>
-        <li>Game List</li>
-        <li>GTA</li>
-        <li>Zelda</i></li>
+        <li>League Of Legends</li>
       </ul>
     </div>   
+    <hr style="margin-top: 100px;border: 1px solid #272303;border-radius: 1px; width: 90%;">
+    <h1>Estatísticas</h1>
+    
+    <div class="row">
+      <div class="col-5 list-stats">
+        <br>
+        <h3>League OF Legends</h3>
+        <br>
+        <table>
+          <tr>
+            <td>Nick:</td>
+            <td>
+              <?php
+                print_r($result->data->user->name);
+              ?>
+            </td>
+          </tr>
+          <tr>
+            <td>Nivel:</td>
+            <td>
+              <?php
+                print_r($result->data->user->summonerLevel);
+              ?>
+            </td>
+          </tr>
+            <?php 
+            $value = 0;
+            foreach($result->data->elo as $value){ ?>
+              <tr>
+                <td>Rank:</td>
+                <td>
+                  <?php 
+                  print_r(ucfirst(strtolower($value->tier))); 
+                  echo "&nbsp";
+                  print_r($value->rank);
+                  echo " - ";
+                  print_r($value->queueType);
+                  echo "<br>";
+                  echo " W: ";
+                  print_r($value->wins);
+                  echo " L: ";
+                  print_r($value->losses);
+                  echo " <br>";
+                  ?>
+                </td>
+              </tr>
+            <?php }?>
+        </table>
+      </div>
       
+      <div class="col-2"></div>
+      
+      <div class="col-5">
+
+      </div>
+
+    </div>
     
     </div>
 

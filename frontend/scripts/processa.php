@@ -23,15 +23,14 @@ if($senha == $senhaValida){
     session_start();
     $_SESSION =  $resultado -> token;
 
-    header('Location:../index.php');  
+    header('Location:../login.php');  
   }else {
-    header('Location:../login.php'); 
+    header('Location:../cadastro.php'); 
   }
 
 }else{
-  header('Location:../login.php'); 
+  header('Location:../cadastro.php'); 
 }
-
   
   
 

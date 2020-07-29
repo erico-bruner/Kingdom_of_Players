@@ -7,9 +7,6 @@ class User extends Model {
       name: DataTypes.STRING,
       email: DataTypes.STRING,
       password: DataTypes.STRING,
-      id_games: DataTypes.INTEGER,
-      location: DataTypes.STRING,
-      puctuation: DataTypes.STRING,
     }, {
       sequelize
     })

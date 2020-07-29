@@ -5,7 +5,6 @@ module.exports = {
 
     const authDate = res.locals.authDate.user
 
-    console.log(authDate)
     const { latitude, longitude } = req.body
 
     const location = {
@@ -23,4 +22,17 @@ module.exports = {
       return res.status(401).send({sucess: false, message: err})
     })
   },
+
+  async index(req, res) {
+
+    const authDate = res.locals.authDate.user
+
+    await dateUser.findOne({
+      id_user: authDate.id_user,
+    }).then((user) => {
+      return res.status(200).send({success: true, data: user})
+    }).catch((err) => {
+      return res.status(401).send({sucess: false, message: err})
+    })
+  }
 }

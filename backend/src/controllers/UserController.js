@@ -73,7 +73,7 @@ module.exports = {
     })
   },
 
-  async teste(req, res) {
+  async index (req, res) {
       res.json({success: "false", users: "users", teste: "testeDentroDoTeste"})
   }
 }

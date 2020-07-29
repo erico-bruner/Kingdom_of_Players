@@ -2,7 +2,7 @@ const express = require('express')
 
 const UserController = require('./controllers/UserController')
 const dateUserController = require('./controllers/dateUserController')
-const lolController = require('./controllers/apiControllers/lolController')
+const lolController = require('./controllers/apiControllers/leagueoflegends/lolController')
 
 const routes = express.Router()
 
@@ -14,8 +14,7 @@ routes.get('/users', authentication, UserController.list)
 
 routes.post('/kingdom', authentication, dateUserController.store)
 routes.post('/kingdom/league_of_legends', authentication, lolController.store)
-routes.get('/kingdom/league_of_legends', authentication, lolController.index)
-
-
+routes.get('/kingdom/league_of_legends', authentication, lolController.list)
+routes.get('/kingdom/league_of_legends/user', authentication, lolController.index)
 
 module.exports = routes

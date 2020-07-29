@@ -14,19 +14,13 @@
   <script src="https://use.fontawesome.com/a2dd855306.js"></script>
 
 <body>
-
-  <header>
-
-  </header>
-
   <main>
   <div class="col-lg-3 col-md-8 col-sm-10" id="formCadastro">
     <form class="col-" name="cadastro" method="post" action="scripts/processa.php">
     <div class="form-group">
         <label for="exampleInputPassword1">Nome no Reino:</label>
         <input type="text" class="form-control" name="nome" id="exampleInputPassword1" placeholder="Senha">
-      </div>
-    
+      </div>    
     <div class="form-group">
         <label for="exampleInputEmail1 " >Email:</label>
         <input type="email" class="form-control"  name="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
@@ -46,7 +40,8 @@
       </div>
       </form>
       </div>  
-   
+      
+      
       
       
   </main>

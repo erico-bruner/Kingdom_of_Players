@@ -54,6 +54,28 @@ body {
   box-shadow: 8px 8px 8px 8px rgb(0, 0, 0);
 }
 
+.container h1{
+  text-align: center;
+  color: rgb(121,0,0);
+}
+
+.container h2{
+  text-align: center;
+  color: rgb(121,0,0);
+}
+
+.container h3{
+  text-align: center;
+  color: rgb(121,0,0);
+}
+
+
+table td{
+  padding-left: 5px;
+  font-size: 20px !important;
+}
+
+
 #perfil .container {
   background-color: #F8F9FA;
   height: 1500px;
@@ -88,7 +110,9 @@ body {
 #perfil .foto-perfil .perfil-foto {
   height: 175px;
   width: 175px;
-  border-radius: 130px;
+  /* border-radius: 130px; */
+  border-radius: 5px;
+  border: 5px solid #f8f9fa;
 }
 
 @media only screen and (max-width: 601px) {
@@ -175,6 +199,33 @@ body {
   text-align: center;
   margin-top: 80px;
 }
+
+.lol-img{
+  float: right;
+}
+
+
+.form-reino{
+  margin-left: 30px;
+  float: left;
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+.form-reino input{
+  border: 1px solid rgb(121, 0, 0);
+  border-radius: 5px;
+  width: 300px;
+}
+
+.form-reino select{
+  border: 1px solid rgb(121, 0, 0);
+  border-radius: 5px;
+  width: 300px;
+}
+
+
+
 
 .footer {
   background-color: white;

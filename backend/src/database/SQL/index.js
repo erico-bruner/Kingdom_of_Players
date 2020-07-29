@@ -5,7 +5,6 @@ const User = require('../../models/SQL/User')
 
 const connection = new Sequelize(dbConfig)
 
-//Teste de coneção com Banco de Dados
 connection.authenticate().then(() => {
   console.log('✔ Connection has been established successfully - SQL ✔')
 }).catch((error) => {
@@ -15,3 +14,6 @@ connection.authenticate().then(() => {
 User.init(connection)
 
 module.exports = connection
+
+
+
